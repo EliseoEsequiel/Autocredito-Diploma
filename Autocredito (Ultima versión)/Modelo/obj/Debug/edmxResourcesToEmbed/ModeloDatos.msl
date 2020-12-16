@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloDatosStoreContainer" CdmEntityContainer="ModeloDatosContainer1">
+    <EntitySetMapping Name="EmpleadoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloDatos.Empleado)">
+        <MappingFragment StoreEntitySet="EmpleadoSet">
+          <ScalarProperty Name="Id_Emp" ColumnName="Id_Emp" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Direc_calle" ColumnName="Direc_calle" />
+          <ScalarProperty Name="Direc_Nro" ColumnName="Direc_Nro" />
+          <ScalarProperty Name="Direc_Ciudad" ColumnName="Direc_Ciudad" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequerimientoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloDatos.Requerimiento)">
+        <MappingFragment StoreEntitySet="RequerimientoSet">
+          <ScalarProperty Name="Id_Req" ColumnName="Id_Req" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticuloSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloDatos.Articulo)">
+        <MappingFragment StoreEntitySet="ArticuloSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Pendientes" ColumnName="Pendientes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RequerimientoArticulo" TypeName="ModeloDatos.RequerimientoArticulo" StoreEntitySet="RequerimientoSet">
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Articulo_Id" />
+      </EndProperty>
+      <EndProperty Name="Requerimiento">
+        <ScalarProperty Name="Id_Req" ColumnName="Id_Req" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

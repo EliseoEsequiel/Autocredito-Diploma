@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFD996D1-DCED-46B4-BEDA-2BB3F55136C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Autocred</RootNamespace>
+    <AssemblyName>Autocred</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.0\lib\net45\FontAwesome.Sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Articulo.Designer.cs">
+      <DependentUpon>Articulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Articulos.Designer.cs">
+      <DependentUpon>Articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comentarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comentarios.Designer.cs">
+      <DependentUpon>Comentarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlStock.Designer.cs">
+      <DependentUpon>ControlStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVprinterHelper.cs" />
+    <Compile Include="Estado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estado.Designer.cs">
+      <DependentUpon>Estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estados.Designer.cs">
+      <DependentUpon>Estados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeposito.Designer.cs">
+      <DependentUpon>FormDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formComun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formComun.Designer.cs">
+      <DependentUpon>formComun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Alert.designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCLAVE_USUARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCLAVE_USUARIO.Designer.cs">
+      <DependentUpon>frmCLAVE_USUARIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRubro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRubro.Designer.cs">
+      <DependentUpon>frmRubro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUSUARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUSUARIO.Designer.cs">
+      <DependentUpon>frmUSUARIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupo.Designer.cs">
+      <DependentUpon>Grupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupos.Designer.cs">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IObserver.cs" />
+    <Compile Include="ISubject.cs" />
+    <Compile Include="Lista_Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_Ordenes.Designer.cs">
+      <DependentUpon>Lista_Ordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memento.cs" />
+    <Compile Include="New_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Item.Designer.cs">
+      <DependentUpon>New_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_Orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Orden.Designer.cs">
+      <DependentUpon>New_Orden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObserverAlerta.cs" />
+    <Compile Include="OrdenDeCompra_Estados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenDeCompra_Estados.Designer.cs">
+      <DependentUpon>OrdenDeCompra_Estados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remito.Designer.cs">
+      <DependentUpon>Remito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remitos.Designer.cs">
+      <DependentUpon>Remitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requerimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requerimientos.Designer.cs">
+      <DependentUpon>Requerimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rubros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rubros.Designer.cs">
+      <DependentUpon>Rubros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Articulo.resx">
+      <DependentUpon>Articulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articulos.resx">
+      <DependentUpon>Articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comentarios.resx">
+      <DependentUpon>Comentarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlStock.resx">
+      <DependentUpon>ControlStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado.resx">
+      <DependentUpon>Estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estados.resx">
+      <DependentUpon>Estados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formComun.resx">
+      <DependentUpon>formComun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeposito.resx">
+      <DependentUpon>FormDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCLAVE_USUARIO.resx">
+      <DependentUpon>frmCLAVE_USUARIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRubro.resx">
+      <DependentUpon>frmRubro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUSUARIO.resx">
+      <DependentUpon>frmUSUARIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupo.resx">
+      <DependentUpon>Grupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_Ordenes.resx">
+      <DependentUpon>Lista_Ordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Item.resx">
+      <DependentUpon>New_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Orden.resx">
+      <DependentUpon>New_Orden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenDeCompra_Estados.resx">
+      <DependentUpon>OrdenDeCompra_Estados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remito.resx">
+      <DependentUpon>Remito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remitos.resx">
+      <DependentUpon>Remitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requerimientos.resx">
+      <DependentUpon>Requerimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rubros.resx">
+      <DependentUpon>Rubros.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\jquery-3.5.1.min.map" />
+    <None Include="Scripts\jquery-3.5.1.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controladora\Controladora.csproj">
+      <Project>{8414bcb2-c1c6-4d6c-8f48-f3fd2a1be5dd}</Project>
+      <Name>Controladora</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{20986a52-b4af-4aa0-a0aa-49b2d0dc237a}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Autocredito LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Requerimientos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Requerimientos %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Requerimientos %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Requerimientos %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\411-4119095_agregar-a-carrito-de-compras-icon-cart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-icons-message-icon-design-write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-paper-computer-icons-writing-clip-art-write-letter-5b13278c68c7f8.6187559115279819644292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notapedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-user-edit_25348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-of-the-best-password-reset-emails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\men %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5bbc4272b6ffb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-limpiar-png-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GRUPO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GRUPO %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupoedit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletegroup %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-new-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-add %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-delete %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-add %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-add %283%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-edit %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edituserbisnes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteuserbusnes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userbissnesadd %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminarlista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDREQ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-folder-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-folder-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-folder-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-view-refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37550c81d5429d6cc277bbabeb6841c5.jpg" />
+    <None Include="Resources\ser-humano-d-con-símbolo-negativo-grande-40397711.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\edit remito_opt.png" />
+    <None Include="Resources\edit remito_opt1.png" />
+    <None Include="Resources\edit remito_opt %281%29.png" />
+    <None Include="Resources\edit remito_opt2.png" />
+    <None Include="Resources\edit remito_opt %282%29.png" />
+    <None Include="Resources\notebook-2282300_960_720_opt.png" />
+    <None Include="Resources\remito_opt.png" />
+    <None Include="Resources\addrem_opt.png" />
+    <None Include="Resources\addrem_opt %281%29.png" />
+    <None Include="Resources\addremsin_opt.jpg" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\deleterem_opt.png" />
+    <None Include="Resources\deleterem_opt %281%29.png" />
+    <None Include="Resources\deleterem_opt %282%29.png" />
+    <None Include="Resources\remitom_opt.png" />
+    <None Include="Resources\remitom_opt %281%29.png" />
+    <Content Include="Resources\error.png" />
+    <None Include="Resources\error1.png" />
+    <Content Include="Resources\icons8_cancel_25px.png" />
+    <None Include="Resources\icons8_cancel_25px1.png" />
+    <Content Include="Resources\info.png" />
+    <None Include="Resources\info1.png" />
+    <Content Include="Resources\success.png" />
+    <None Include="Resources\success1.png" />
+    <Content Include="Resources\warning.png" />
+    <None Include="Resources\warning1.png" />
+    <Content Include="Scripts\jquery-3.5.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.5.1.js" />
+    <Content Include="Scripts\jquery-3.5.1.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

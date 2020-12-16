@@ -1,0 +1,169 @@
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\Modelo.dll
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\Modelo.pdb
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\obj\Debug\Modelo.dll
+C:\Users\limac\Documents\FACULTAD\Eliseo - Campo y Diploma\Autocred0603\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\Modelo.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\obj\Debug\Modelo.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\Modelo.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\obj\Debug\Modelo.dll
+C:\Users\Navegador\Desktop\Eliseo_Campo-master29-1\Modelo\obj\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\obj\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\obj\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\navegador\Desktop\Programa-Pedido-Stock\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\Modelo.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\obj\Debug\Modelo.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Programa-Pedido-Stock\Modelo\obj\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\obj\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Programa-Pedido-Stock11-2 - copia\Modelo\obj\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\navegador\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\navegador\Desktop\Autocredito\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\navegador\Desktop\Autocredito\Modelo\obj\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Autocredito\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\Modelo.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\obj\Debug\Modelo.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito\Modelo\obj\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.dll
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.dll
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Eliseo E. Ruiz Diaz\Desktop\Autocredito20-2\Modelo\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\navegador\Desktop\Autocredito20-2\Modelo\bin\Debug\FontAwesome.Sharp.dll
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\Modelo.dll.config
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\Modelo.dll
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\Modelo.pdb
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\EntityFramework.dll
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\FontAwesome.Sharp.dll
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\EntityFramework.xml
+E:\Descargas\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Descargas\Autocredito20-2\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+E:\Descargas\Autocredito20-2\Modelo\obj\Debug\Modelo.dll
+E:\Descargas\Autocredito20-2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.dll
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.dll
+C:\Users\Emiliano\Desktop\Autocredito20-2\Modelo\obj\Debug\Modelo.pdb
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\Modelo.dll.config
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\Modelo.dll
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\Modelo.pdb
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\EntityFramework.dll
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\FontAwesome.Sharp.dll
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\EntityFramework.xml
+E:\Descargas\Autocredito1-8\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Descargas\Autocredito1-8\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+E:\Descargas\Autocredito1-8\Modelo\obj\Debug\Modelo.dll
+E:\Descargas\Autocredito1-8\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\Modelo.dll
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\obj\Debug\Modelo.dll
+C:\Users\Emiliano\Desktop\Autocredito1-8\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\Modelo.dll
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\obj\Debug\Modelo.dll
+C:\Users\Emiliano\Desktop\Autocredito DIPLOMA\Autocredito (Ultima versión)\Modelo\obj\Debug\Modelo.pdb

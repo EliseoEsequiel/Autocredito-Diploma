@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloDatos.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloDatosStoreContainer">
+    <EntitySet Name="EmpleadoSet" EntityType="ModeloDatos.Store.EmpleadoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequerimientoSet" EntityType="ModeloDatos.Store.RequerimientoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ArticuloSet" EntityType="ModeloDatos.Store.ArticuloSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="RequerimientoArticulo" Association="ModeloDatos.Store.RequerimientoArticulo">
+      <End Role="Requerimiento" EntitySet="RequerimientoSet" />
+      <End Role="Articulo" EntitySet="ArticuloSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="EmpleadoSet">
+    <Key>
+      <PropertyRef Name="Id_Emp" />
+    </Key>
+    <Property Name="Id_Emp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apellido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Direc_calle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Direc_Nro" Type="int" Nullable="false" />
+    <Property Name="Direc_Ciudad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefono" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequerimientoSet">
+    <Key>
+      <PropertyRef Name="Id_Req" />
+    </Key>
+    <Property Name="Id_Req" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Articulo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArticuloSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stock" Type="int" Nullable="false" />
+    <Property Name="Pendientes" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="RequerimientoArticulo">
+    <End Role="Requerimiento" Type="ModeloDatos.Store.RequerimientoSet" Multiplicity="*" />
+    <End Role="Articulo" Type="ModeloDatos.Store.ArticuloSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Requerimiento">
+        <PropertyRef Name="Articulo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

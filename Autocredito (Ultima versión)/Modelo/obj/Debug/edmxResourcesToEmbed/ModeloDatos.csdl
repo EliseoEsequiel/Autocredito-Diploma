@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloDatos" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModeloDatosContainer1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EmpleadoSet" EntityType="ModeloDatos.Empleado" />
+    <EntitySet Name="RequerimientoSet" EntityType="ModeloDatos.Requerimiento" />
+    <EntitySet Name="ArticuloSet" EntityType="ModeloDatos.Articulo" />
+    <AssociationSet Name="RequerimientoArticulo" Association="ModeloDatos.RequerimientoArticulo">
+      <End Role="Requerimiento" EntitySet="RequerimientoSet" />
+      <End Role="Articulo" EntitySet="ArticuloSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="Id_Emp" />
+    </Key>
+    <Property Name="Id_Emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" />
+    <Property Name="Apellido" Type="String" Nullable="false" />
+    <Property Name="Direc_calle" Type="String" Nullable="false" />
+    <Property Name="Direc_Nro" Type="Int32" Nullable="false" />
+    <Property Name="Direc_Ciudad" Type="String" Nullable="false" />
+    <Property Name="Telefono" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Requerimiento">
+    <Key>
+      <PropertyRef Name="Id_Req" />
+    </Key>
+    <Property Name="Id_Req" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Articulo" Relationship="ModeloDatos.RequerimientoArticulo" FromRole="Requerimiento" ToRole="Articulo" />
+  </EntityType>
+  <EntityType Name="Articulo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" Nullable="false" />
+    <Property Name="Stock" Type="Int32" Nullable="false" />
+    <Property Name="Pendientes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Requerimiento" Relationship="ModeloDatos.RequerimientoArticulo" FromRole="Articulo" ToRole="Requerimiento" />
+  </EntityType>
+  <Association Name="RequerimientoArticulo">
+    <End Type="ModeloDatos.Requerimiento" Role="Requerimiento" Multiplicity="*" />
+    <End Type="ModeloDatos.Articulo" Role="Articulo" Multiplicity="1" />
+  </Association>
+</Schema>

@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloNuevo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloNuevoStoreContainer">
+    <EntitySet Name="RequerimientoSet" EntityType="ModeloNuevo.Store.RequerimientoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ArticuloSet" EntityType="ModeloNuevo.Store.ArticuloSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioSet" EntityType="ModeloNuevo.Store.UsuarioSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GrupoSet" EntityType="ModeloNuevo.Store.GrupoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RubroSet" EntityType="ModeloNuevo.Store.RubroSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleCompraSet" EntityType="ModeloNuevo.Store.DetalleCompraSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orden_CompraSet" EntityType="ModeloNuevo.Store.Orden_CompraSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProveedorSet" EntityType="ModeloNuevo.Store.ProveedorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadosSet" EntityType="ModeloNuevo.Store.EstadosSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Remitos" EntityType="ModeloNuevo.Store.Remitos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComentariosSet" EntityType="ModeloNuevo.Store.ComentariosSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="RequerimientoArticulo" Association="ModeloNuevo.Store.RequerimientoArticulo">
+      <End Role="Requerimiento" EntitySet="RequerimientoSet" />
+      <End Role="Articulo" EntitySet="ArticuloSet" />
+    </AssociationSet>
+    <AssociationSet Name="UsuarioGrupo" Association="ModeloNuevo.Store.UsuarioGrupo">
+      <End Role="Usuario" EntitySet="UsuarioSet" />
+      <End Role="Grupo" EntitySet="GrupoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticuloRubro" Association="ModeloNuevo.Store.ArticuloRubro">
+      <End Role="Articulo" EntitySet="ArticuloSet" />
+      <End Role="Rubro" EntitySet="RubroSet" />
+    </AssociationSet>
+    <AssociationSet Name="DetalleCompraRequerimiento" Association="ModeloNuevo.Store.DetalleCompraRequerimiento">
+      <End Role="DetalleCompra" EntitySet="DetalleCompraSet" />
+      <End Role="Requerimiento" EntitySet="RequerimientoSet" />
+    </AssociationSet>
+    <AssociationSet Name="DetalleCompraOrden_Compra" Association="ModeloNuevo.Store.DetalleCompraOrden_Compra">
+      <End Role="DetalleCompra" EntitySet="DetalleCompraSet" />
+      <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+    </AssociationSet>
+    <AssociationSet Name="RubroProveedor" Association="ModeloNuevo.Store.RubroProveedor">
+      <End Role="Rubro" EntitySet="RubroSet" />
+      <End Role="Proveedor" EntitySet="ProveedorSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProveedorOrden_Compra" Association="ModeloNuevo.Store.ProveedorOrden_Compra">
+      <End Role="Proveedor" EntitySet="ProveedorSet" />
+      <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+    </AssociationSet>
+    <AssociationSet Name="EstadosOrden_Compra" Association="ModeloNuevo.Store.EstadosOrden_Compra">
+      <End Role="Estados" EntitySet="EstadosSet" />
+      <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+    </AssociationSet>
+    <AssociationSet Name="RemitosOrden_Compra" Association="ModeloNuevo.Store.RemitosOrden_Compra">
+      <End Role="Remitos" EntitySet="Remitos" />
+      <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+    </AssociationSet>
+    <AssociationSet Name="ComentariosArticulo" Association="ModeloNuevo.Store.ComentariosArticulo">
+      <End Role="Comentarios" EntitySet="ComentariosSet" />
+      <End Role="Articulo" EntitySet="ArticuloSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="RequerimientoSet">
+    <Key>
+      <PropertyRef Name="Id_Req" />
+    </Key>
+    <Property Name="Id_Req" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Articulo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArticuloSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stock" Type="int" Nullable="false" />
+    <Property Name="Pendientes" Type="int" Nullable="false" />
+    <Property Name="Stock_Min" Type="int" Nullable="false" />
+    <Property Name="Pedido_Max" Type="int" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Rubro_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Alias" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pass" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apellido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Grupo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GrupoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RubroSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleCompraSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Requerimiento_Id_Req" Type="int" Nullable="false" />
+    <Property Name="Orden_Compra_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Orden_CompraSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ultima_Modificacion" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Limite" Type="datetime" Nullable="true" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Proveedor_Id" Type="int" Nullable="false" />
+    <Property Name="Estados_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProveedorSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Razon_Social" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Direccion_Calle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Direccion_Nro" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Rubro_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadosSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Remitos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Orden_Compra_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComentariosSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+    <Property Name="Faltantes" Type="int" Nullable="false" />
+    <Property Name="Borrado" Type="bit" Nullable="false" />
+    <Property Name="Articulo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="RequerimientoArticulo">
+    <End Role="Requerimiento" Type="ModeloNuevo.Store.RequerimientoSet" Multiplicity="*" />
+    <End Role="Articulo" Type="ModeloNuevo.Store.ArticuloSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Requerimiento">
+        <PropertyRef Name="Articulo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsuarioGrupo">
+    <End Role="Usuario" Type="ModeloNuevo.Store.UsuarioSet" Multiplicity="*" />
+    <End Role="Grupo" Type="ModeloNuevo.Store.GrupoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="Grupo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticuloRubro">
+    <End Role="Articulo" Type="ModeloNuevo.Store.ArticuloSet" Multiplicity="*" />
+    <End Role="Rubro" Type="ModeloNuevo.Store.RubroSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Rubro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="Rubro_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DetalleCompraRequerimiento">
+    <End Role="DetalleCompra" Type="ModeloNuevo.Store.DetalleCompraSet" Multiplicity="*" />
+    <End Role="Requerimiento" Type="ModeloNuevo.Store.RequerimientoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Requerimiento">
+        <PropertyRef Name="Id_Req" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="Requerimiento_Id_Req" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DetalleCompraOrden_Compra">
+    <End Role="DetalleCompra" Type="ModeloNuevo.Store.DetalleCompraSet" Multiplicity="*" />
+    <End Role="Orden_Compra" Type="ModeloNuevo.Store.Orden_CompraSet" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Orden_Compra">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="Orden_Compra_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RubroProveedor">
+    <End Role="Rubro" Type="ModeloNuevo.Store.RubroSet" Multiplicity="1" />
+    <End Role="Proveedor" Type="ModeloNuevo.Store.ProveedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rubro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="Rubro_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProveedorOrden_Compra">
+    <End Role="Proveedor" Type="ModeloNuevo.Store.ProveedorSet" Multiplicity="1" />
+    <End Role="Orden_Compra" Type="ModeloNuevo.Store.Orden_CompraSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orden_Compra">
+        <PropertyRef Name="Proveedor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EstadosOrden_Compra">
+    <End Role="Estados" Type="ModeloNuevo.Store.EstadosSet" Multiplicity="1" />
+    <End Role="Orden_Compra" Type="ModeloNuevo.Store.Orden_CompraSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estados">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orden_Compra">
+        <PropertyRef Name="Estados_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RemitosOrden_Compra">
+    <End Role="Remitos" Type="ModeloNuevo.Store.Remitos" Multiplicity="*" />
+    <End Role="Orden_Compra" Type="ModeloNuevo.Store.Orden_CompraSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Orden_Compra">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Remitos">
+        <PropertyRef Name="Orden_Compra_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ComentariosArticulo">
+    <End Role="Comentarios" Type="ModeloNuevo.Store.ComentariosSet" Multiplicity="*" />
+    <End Role="Articulo" Type="ModeloNuevo.Store.ArticuloSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comentarios">
+        <PropertyRef Name="Articulo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloNuevo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModeloNuevoContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RequerimientoSet" EntityType="ModeloNuevo.Requerimiento" />
+          <EntitySet Name="ArticuloSet" EntityType="ModeloNuevo.Articulo" />
+          <AssociationSet Name="RequerimientoArticulo" Association="ModeloNuevo.RequerimientoArticulo">
+            <End Role="Requerimiento" EntitySet="RequerimientoSet" />
+            <End Role="Articulo" EntitySet="ArticuloSet" />
+          </AssociationSet>
+          <EntitySet Name="UsuarioSet" EntityType="ModeloNuevo.Usuario" />
+          <EntitySet Name="GrupoSet" EntityType="ModeloNuevo.Grupo" />
+          <AssociationSet Name="UsuarioGrupo" Association="ModeloNuevo.UsuarioGrupo">
+            <End Role="Usuario" EntitySet="UsuarioSet" />
+            <End Role="Grupo" EntitySet="GrupoSet" />
+          </AssociationSet>
+          <EntitySet Name="RubroSet" EntityType="ModeloNuevo.Rubro" />
+          <AssociationSet Name="ArticuloRubro" Association="ModeloNuevo.ArticuloRubro">
+            <End Role="Articulo" EntitySet="ArticuloSet" />
+            <End Role="Rubro" EntitySet="RubroSet" />
+          </AssociationSet>
+          <EntitySet Name="DetalleCompraSet" EntityType="ModeloNuevo.DetalleCompra" />
+          <EntitySet Name="Orden_CompraSet" EntityType="ModeloNuevo.Orden_Compra" />
+          <AssociationSet Name="DetalleCompraRequerimiento" Association="ModeloNuevo.DetalleCompraRequerimiento">
+            <End Role="DetalleCompra" EntitySet="DetalleCompraSet" />
+            <End Role="Requerimiento" EntitySet="RequerimientoSet" />
+          </AssociationSet>
+          <AssociationSet Name="DetalleCompraOrden_Compra" Association="ModeloNuevo.DetalleCompraOrden_Compra">
+            <End Role="DetalleCompra" EntitySet="DetalleCompraSet" />
+            <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+          </AssociationSet>
+          <EntitySet Name="ProveedorSet" EntityType="ModeloNuevo.Proveedor" />
+          <AssociationSet Name="RubroProveedor" Association="ModeloNuevo.RubroProveedor">
+            <End Role="Rubro" EntitySet="RubroSet" />
+            <End Role="Proveedor" EntitySet="ProveedorSet" />
+          </AssociationSet>
+          <AssociationSet Name="ProveedorOrden_Compra" Association="ModeloNuevo.ProveedorOrden_Compra">
+            <End Role="Proveedor" EntitySet="ProveedorSet" />
+            <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+          </AssociationSet>
+          <EntitySet Name="EstadosSet" EntityType="ModeloNuevo.Estados" />
+          <AssociationSet Name="EstadosOrden_Compra" Association="ModeloNuevo.EstadosOrden_Compra">
+            <End Role="Estados" EntitySet="EstadosSet" />
+            <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+          </AssociationSet>
+          <EntitySet Name="Remitos" EntityType="ModeloNuevo.Remitos" />
+          <AssociationSet Name="RemitosOrden_Compra" Association="ModeloNuevo.RemitosOrden_Compra">
+            <End Role="Remitos" EntitySet="Remitos" />
+            <End Role="Orden_Compra" EntitySet="Orden_CompraSet" />
+          </AssociationSet>
+          <EntitySet Name="ComentariosSet" EntityType="ModeloNuevo.Comentarios" />
+          <AssociationSet Name="ComentariosArticulo" Association="ModeloNuevo.ComentariosArticulo">
+            <End Role="Comentarios" EntitySet="ComentariosSet" />
+            <End Role="Articulo" EntitySet="ArticuloSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Requerimiento">
+          <Key>
+            <PropertyRef Name="Id_Req" />
+          </Key>
+          <Property Name="Id_Req" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Articulo" Relationship="ModeloNuevo.RequerimientoArticulo" FromRole="Requerimiento" ToRole="Articulo" />
+          <NavigationProperty Name="DetalleCompra" Relationship="ModeloNuevo.DetalleCompraRequerimiento" FromRole="Requerimiento" ToRole="DetalleCompra" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Articulo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Stock" Type="Int32" Nullable="false" />
+          <Property Name="Pendientes" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Requerimiento" Relationship="ModeloNuevo.RequerimientoArticulo" FromRole="Articulo" ToRole="Requerimiento" />
+          <NavigationProperty Name="Rubro" Relationship="ModeloNuevo.ArticuloRubro" FromRole="Articulo" ToRole="Rubro" />
+          <Property Name="Stock_Min" Type="Int32" Nullable="false" />
+          <Property Name="Pedido_Max" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Comentarios" Relationship="ModeloNuevo.ComentariosArticulo" FromRole="Articulo" ToRole="Comentarios" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="RequerimientoArticulo">
+          <End Type="ModeloNuevo.Requerimiento" Role="Requerimiento" Multiplicity="*" />
+          <End Type="ModeloNuevo.Articulo" Role="Articulo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Alias" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Pass" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Grupo" Relationship="ModeloNuevo.UsuarioGrupo" FromRole="Usuario" ToRole="Grupo" />
+          <Property Name="Apellido" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Usuario" Relationship="ModeloNuevo.UsuarioGrupo" FromRole="Grupo" ToRole="Usuario" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="UsuarioGrupo">
+          <End Type="ModeloNuevo.Usuario" Role="Usuario" Multiplicity="*" />
+          <End Type="ModeloNuevo.Grupo" Role="Grupo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Rubro">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Articulo" Relationship="ModeloNuevo.ArticuloRubro" FromRole="Rubro" ToRole="Articulo" />
+          <NavigationProperty Name="Proveedor" Relationship="ModeloNuevo.RubroProveedor" FromRole="Rubro" ToRole="Proveedor" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="ArticuloRubro">
+          <End Type="ModeloNuevo.Articulo" Role="Articulo" Multiplicity="*" />
+          <End Type="ModeloNuevo.Rubro" Role="Rubro" Multiplicity="1" />
+        </Association>
+        <EntityType Name="DetalleCompra">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cantidad" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Requerimiento" Relationship="ModeloNuevo.DetalleCompraRequerimiento" FromRole="DetalleCompra" ToRole="Requerimiento" />
+          <NavigationProperty Name="Orden_Compra" Relationship="ModeloNuevo.DetalleCompraOrden_Compra" FromRole="DetalleCompra" ToRole="Orden_Compra" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orden_Compra">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ultima_Modificacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Fecha_Limite" Type="DateTime" Nullable="true" Precision="3" />
+          <NavigationProperty Name="DetalleCompra" Relationship="ModeloNuevo.DetalleCompraOrden_Compra" FromRole="Orden_Compra" ToRole="DetalleCompra" />
+          <NavigationProperty Name="Proveedor" Relationship="ModeloNuevo.ProveedorOrden_Compra" FromRole="Orden_Compra" ToRole="Proveedor" />
+          <NavigationProperty Name="Estados" Relationship="ModeloNuevo.EstadosOrden_Compra" FromRole="Orden_Compra" ToRole="Estados" />
+          <NavigationProperty Name="Remitos" Relationship="ModeloNuevo.RemitosOrden_Compra" FromRole="Orden_Compra" ToRole="Remitos" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="DetalleCompraRequerimiento">
+          <End Type="ModeloNuevo.DetalleCompra" Role="DetalleCompra" Multiplicity="*" />
+          <End Type="ModeloNuevo.Requerimiento" Role="Requerimiento" Multiplicity="1" />
+        </Association>
+        <Association Name="DetalleCompraOrden_Compra">
+          <End Type="ModeloNuevo.DetalleCompra" Role="DetalleCompra" Multiplicity="*" />
+          <End Type="ModeloNuevo.Orden_Compra" Role="Orden_Compra" Multiplicity="0..1" />
+        </Association>
+        <EntityType Name="Proveedor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Razon_Social" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion_Calle" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion_Nro" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Rubro" Relationship="ModeloNuevo.RubroProveedor" FromRole="Proveedor" ToRole="Rubro" />
+          <NavigationProperty Name="Orden_Compra" Relationship="ModeloNuevo.ProveedorOrden_Compra" FromRole="Proveedor" ToRole="Orden_Compra" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="RubroProveedor">
+          <End Type="ModeloNuevo.Rubro" Role="Rubro" Multiplicity="1" />
+          <End Type="ModeloNuevo.Proveedor" Role="Proveedor" Multiplicity="*" />
+        </Association>
+        <Association Name="ProveedorOrden_Compra">
+          <End Type="ModeloNuevo.Proveedor" Role="Proveedor" Multiplicity="1" />
+          <End Type="ModeloNuevo.Orden_Compra" Role="Orden_Compra" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Estados">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Orden_Compra" Relationship="ModeloNuevo.EstadosOrden_Compra" FromRole="Estados" ToRole="Orden_Compra" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="EstadosOrden_Compra">
+          <End Type="ModeloNuevo.Estados" Role="Estados" Multiplicity="1" />
+          <End Type="ModeloNuevo.Orden_Compra" Role="Orden_Compra" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Remitos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Orden_Compra" Relationship="ModeloNuevo.RemitosOrden_Compra" FromRole="Remitos" ToRole="Orden_Compra" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="RemitosOrden_Compra">
+          <End Type="ModeloNuevo.Remitos" Role="Remitos" Multiplicity="0..1" />
+          <End Type="ModeloNuevo.Orden_Compra" Role="Orden_Compra" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Comentarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="Faltantes" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Articulo" Relationship="ModeloNuevo.ComentariosArticulo" FromRole="Comentarios" ToRole="Articulo" />
+          <Property Name="Borrado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="ComentariosArticulo">
+          <End Type="ModeloNuevo.Comentarios" Role="Comentarios" Multiplicity="*" />
+          <End Type="ModeloNuevo.Articulo" Role="Articulo" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloNuevoStoreContainer" CdmEntityContainer="ModeloNuevoContainer">
+    <EntitySetMapping Name="RequerimientoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Requerimiento)">
+        <MappingFragment StoreEntitySet="RequerimientoSet">
+          <ScalarProperty Name="Id_Req" ColumnName="Id_Req" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticuloSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Articulo)">
+        <MappingFragment StoreEntitySet="ArticuloSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Pendientes" ColumnName="Pendientes" />
+          <ScalarProperty Name="Stock_Min" ColumnName="Stock_Min" />
+          <ScalarProperty Name="Pedido_Max" ColumnName="Pedido_Max" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Usuario)">
+        <MappingFragment StoreEntitySet="UsuarioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Grupo)">
+        <MappingFragment StoreEntitySet="GrupoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RubroSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Rubro)">
+        <MappingFragment StoreEntitySet="RubroSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleCompraSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.DetalleCompra)">
+        <MappingFragment StoreEntitySet="DetalleCompraSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orden_CompraSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Orden_Compra)">
+        <MappingFragment StoreEntitySet="Orden_CompraSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ultima_Modificacion" ColumnName="Ultima_Modificacion" />
+          <ScalarProperty Name="Fecha_Limite" ColumnName="Fecha_Limite" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Proveedor)">
+        <MappingFragment StoreEntitySet="ProveedorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Direccion_Calle" ColumnName="Direccion_Calle" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Direccion_Nro" ColumnName="Direccion_Nro" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Estados)">
+        <MappingFragment StoreEntitySet="EstadosSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remitos">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Remitos)">
+        <MappingFragment StoreEntitySet="Remitos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComentariosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Comentarios)">
+        <MappingFragment StoreEntitySet="ComentariosSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Faltantes" ColumnName="Faltantes" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RequerimientoArticulo" TypeName="ModeloNuevo.RequerimientoArticulo" StoreEntitySet="RequerimientoSet">
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Articulo_Id" />
+      </EndProperty>
+      <EndProperty Name="Requerimiento">
+        <ScalarProperty Name="Id_Req" ColumnName="Id_Req" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuarioGrupo" TypeName="ModeloNuevo.UsuarioGrupo" StoreEntitySet="UsuarioSet">
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="Id" ColumnName="Grupo_Id" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticuloRubro" TypeName="ModeloNuevo.ArticuloRubro" StoreEntitySet="ArticuloSet">
+      <EndProperty Name="Rubro">
+        <ScalarProperty Name="Id" ColumnName="Rubro_Id" />
+      </EndProperty>
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetalleCompraRequerimiento" TypeName="ModeloNuevo.DetalleCompraRequerimiento" StoreEntitySet="DetalleCompraSet">
+      <EndProperty Name="Requerimiento">
+        <ScalarProperty Name="Id_Req" ColumnName="Requerimiento_Id_Req" />
+      </EndProperty>
+      <EndProperty Name="DetalleCompra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetalleCompraOrden_Compra" TypeName="ModeloNuevo.DetalleCompraOrden_Compra" StoreEntitySet="DetalleCompraSet">
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Orden_Compra_Id" />
+      </EndProperty>
+      <EndProperty Name="DetalleCompra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Orden_Compra_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RubroProveedor" TypeName="ModeloNuevo.RubroProveedor" StoreEntitySet="ProveedorSet">
+      <EndProperty Name="Rubro">
+        <ScalarProperty Name="Id" ColumnName="Rubro_Id" />
+      </EndProperty>
+      <EndProperty Name="Proveedor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProveedorOrden_Compra" TypeName="ModeloNuevo.ProveedorOrden_Compra" StoreEntitySet="Orden_CompraSet">
+      <EndProperty Name="Proveedor">
+        <ScalarProperty Name="Id" ColumnName="Proveedor_Id" />
+      </EndProperty>
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EstadosOrden_Compra" TypeName="ModeloNuevo.EstadosOrden_Compra" StoreEntitySet="Orden_CompraSet">
+      <EndProperty Name="Estados">
+        <ScalarProperty Name="Id" ColumnName="Estados_Id" />
+      </EndProperty>
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RemitosOrden_Compra" TypeName="ModeloNuevo.RemitosOrden_Compra" StoreEntitySet="Remitos">
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Orden_Compra_Id" />
+      </EndProperty>
+      <EndProperty Name="Remitos">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ComentariosArticulo" TypeName="ModeloNuevo.ComentariosArticulo" StoreEntitySet="ComentariosSet">
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Articulo_Id" />
+      </EndProperty>
+      <EndProperty Name="Comentarios">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

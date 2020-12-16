@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0325b704cfe7401eabb86c3080f117e3" Name="Diagram1" >
+        <EntityTypeShape EntityType="ModeloNuevo.Requerimiento" Width="1.5" PointX="5.25" PointY="2.875" />
+        <EntityTypeShape EntityType="ModeloNuevo.Articulo" Width="1.5" PointX="1.125" PointY="0.875" />
+        <AssociationConnector Association="ModeloNuevo.RequerimientoArticulo" />
+        <EntityTypeShape EntityType="ModeloNuevo.Usuario" Width="1.5" PointX="0.5" PointY="5.875" />
+        <EntityTypeShape EntityType="ModeloNuevo.Grupo" Width="1.5" PointX="2.75" PointY="8.125" />
+        <AssociationConnector Association="ModeloNuevo.UsuarioGrupo" />
+        <EntityTypeShape EntityType="ModeloNuevo.Rubro" Width="1.5" PointX="4.5" PointY="0.75" />
+        <AssociationConnector Association="ModeloNuevo.ArticuloRubro" />
+        <EntityTypeShape EntityType="ModeloNuevo.DetalleCompra" Width="1.5" PointX="5.125" PointY="5.625" />
+        <EntityTypeShape EntityType="ModeloNuevo.Orden_Compra" Width="1.5" PointX="7.375" PointY="5" />
+        <AssociationConnector Association="ModeloNuevo.DetalleCompraRequerimiento" />
+        <AssociationConnector Association="ModeloNuevo.DetalleCompraOrden_Compra" />
+        <EntityTypeShape EntityType="ModeloNuevo.Proveedor" Width="1.5" PointX="8.75" PointY="0.875" />
+        <AssociationConnector Association="ModeloNuevo.RubroProveedor" />
+        <AssociationConnector Association="ModeloNuevo.ProveedorOrden_Compra" ManuallyRouted="true" >
+          <ConnectorPoint PointX="9.5625004999999987" PointY="3.2398893229166661" />
+          <ConnectorPoint PointX="9.5625004999999987" PointY="5.0623633692286019" />
+          <ConnectorPoint PointX="8.875" PointY="5.0623633692286019" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloNuevo.Estados" Width="1.5" PointX="9.5" PointY="5.375" />
+        <AssociationConnector Association="ModeloNuevo.EstadosOrden_Compra" />
+        <EntityTypeShape EntityType="ModeloNuevo.Remitos" Width="1.5" PointX="7.375" PointY="8.125" />
+        <AssociationConnector Association="ModeloNuevo.RemitosOrden_Compra" />
+        <EntityTypeShape EntityType="ModeloNuevo.Comentarios" Width="1.5" PointX="2.625" PointY="5.875" />
+        <AssociationConnector Association="ModeloNuevo.ComentariosArticulo" ManuallyRouted="false" >
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

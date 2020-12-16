@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloNuevoStoreContainer" CdmEntityContainer="ModeloNuevoContainer">
+    <EntitySetMapping Name="RequerimientoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Requerimiento)">
+        <MappingFragment StoreEntitySet="RequerimientoSet">
+          <ScalarProperty Name="Id_Req" ColumnName="Id_Req" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticuloSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Articulo)">
+        <MappingFragment StoreEntitySet="ArticuloSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Pendientes" ColumnName="Pendientes" />
+          <ScalarProperty Name="Stock_Min" ColumnName="Stock_Min" />
+          <ScalarProperty Name="Pedido_Max" ColumnName="Pedido_Max" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Usuario)">
+        <MappingFragment StoreEntitySet="UsuarioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Grupo)">
+        <MappingFragment StoreEntitySet="GrupoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RubroSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Rubro)">
+        <MappingFragment StoreEntitySet="RubroSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleCompraSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.DetalleCompra)">
+        <MappingFragment StoreEntitySet="DetalleCompraSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orden_CompraSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Orden_Compra)">
+        <MappingFragment StoreEntitySet="Orden_CompraSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ultima_Modificacion" ColumnName="Ultima_Modificacion" />
+          <ScalarProperty Name="Fecha_Limite" ColumnName="Fecha_Limite" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProveedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Proveedor)">
+        <MappingFragment StoreEntitySet="ProveedorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Direccion_Calle" ColumnName="Direccion_Calle" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Direccion_Nro" ColumnName="Direccion_Nro" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Estados)">
+        <MappingFragment StoreEntitySet="EstadosSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remitos">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Remitos)">
+        <MappingFragment StoreEntitySet="Remitos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComentariosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloNuevo.Comentarios)">
+        <MappingFragment StoreEntitySet="ComentariosSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Faltantes" ColumnName="Faltantes" />
+          <ScalarProperty Name="Borrado" ColumnName="Borrado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RequerimientoArticulo" TypeName="ModeloNuevo.RequerimientoArticulo" StoreEntitySet="RequerimientoSet">
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Articulo_Id" />
+      </EndProperty>
+      <EndProperty Name="Requerimiento">
+        <ScalarProperty Name="Id_Req" ColumnName="Id_Req" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuarioGrupo" TypeName="ModeloNuevo.UsuarioGrupo" StoreEntitySet="UsuarioSet">
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="Id" ColumnName="Grupo_Id" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticuloRubro" TypeName="ModeloNuevo.ArticuloRubro" StoreEntitySet="ArticuloSet">
+      <EndProperty Name="Rubro">
+        <ScalarProperty Name="Id" ColumnName="Rubro_Id" />
+      </EndProperty>
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetalleCompraRequerimiento" TypeName="ModeloNuevo.DetalleCompraRequerimiento" StoreEntitySet="DetalleCompraSet">
+      <EndProperty Name="Requerimiento">
+        <ScalarProperty Name="Id_Req" ColumnName="Requerimiento_Id_Req" />
+      </EndProperty>
+      <EndProperty Name="DetalleCompra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetalleCompraOrden_Compra" TypeName="ModeloNuevo.DetalleCompraOrden_Compra" StoreEntitySet="DetalleCompraSet">
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Orden_Compra_Id" />
+      </EndProperty>
+      <EndProperty Name="DetalleCompra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Orden_Compra_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RubroProveedor" TypeName="ModeloNuevo.RubroProveedor" StoreEntitySet="ProveedorSet">
+      <EndProperty Name="Rubro">
+        <ScalarProperty Name="Id" ColumnName="Rubro_Id" />
+      </EndProperty>
+      <EndProperty Name="Proveedor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProveedorOrden_Compra" TypeName="ModeloNuevo.ProveedorOrden_Compra" StoreEntitySet="Orden_CompraSet">
+      <EndProperty Name="Proveedor">
+        <ScalarProperty Name="Id" ColumnName="Proveedor_Id" />
+      </EndProperty>
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EstadosOrden_Compra" TypeName="ModeloNuevo.EstadosOrden_Compra" StoreEntitySet="Orden_CompraSet">
+      <EndProperty Name="Estados">
+        <ScalarProperty Name="Id" ColumnName="Estados_Id" />
+      </EndProperty>
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RemitosOrden_Compra" TypeName="ModeloNuevo.RemitosOrden_Compra" StoreEntitySet="Remitos">
+      <EndProperty Name="Orden_Compra">
+        <ScalarProperty Name="Id" ColumnName="Orden_Compra_Id" />
+      </EndProperty>
+      <EndProperty Name="Remitos">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ComentariosArticulo" TypeName="ModeloNuevo.ComentariosArticulo" StoreEntitySet="ComentariosSet">
+      <EndProperty Name="Articulo">
+        <ScalarProperty Name="Id" ColumnName="Articulo_Id" />
+      </EndProperty>
+      <EndProperty Name="Comentarios">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
